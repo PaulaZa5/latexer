@@ -18,7 +18,7 @@
 
 ## Description
 
-Application to help you turn your handwritten mathmatics equations into inline LaTeX code.
+Application to help you turn your handwritten mathmatical equations into inline LaTeX code.
 <br>
 
 ## To Do

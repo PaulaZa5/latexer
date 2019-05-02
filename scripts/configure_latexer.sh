@@ -14,7 +14,7 @@ if ! which pip3 > /dev/null; then
     apt install pip3
 fi
 
-pip install loguru pylatex pytesseract
+pip install flask loguru pylatex pytesseract
 
 echo "Installed required python packages succesfully."
 
