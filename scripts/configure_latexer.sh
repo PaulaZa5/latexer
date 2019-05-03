@@ -21,7 +21,7 @@ echo "Installed required python packages succesfully."
 
 echo "Installing required software components..."
 
-sudo apt-get install latexmk tesseract
+sudo apt install latexmk tesseract-ocr
 
 echo "Installed required software components."
 
