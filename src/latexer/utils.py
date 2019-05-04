@@ -143,6 +143,7 @@ class Latexer(object):
 
         expr = str(cleaner).split('\n')
 
+        self.status = 'success'
         if len(expr) == 1:
             self.top = ''
             self._expression = expr[0]
@@ -172,6 +173,7 @@ class Latexer(object):
             build_pdf('\\documentclass{article}\\begin{document}\n'+self._expression+'\n\\end{document}')
         except LatexBuildError as e:
             for err in e.get_errors():
+                self.status = 'failed'
                 logger.error('Error in {}, line {}: {}'.format(err['filename'], err['line'], err['error']))
 
     def _assert_parentheses(self):
@@ -183,9 +185,13 @@ class Latexer(object):
             if c in lparen:
                 parens.append(c)
             elif c in rparen:
-                assert rparen[c] == lparen[parens.pop()], logger.error('Incorrect parentheses type at {}.'.format(c))
+                if rparen[c] != lparen[parens.pop()]:
+                    self.status = 'failed'
+                    logger.error('Incorrect parentheses type at {}.'.format(c))
 
-        assert len(parens) == 0, logger.error('Found non-closed parentheses.')
+        if len(parens) != 0:
+            self.status = 'failed'
+            logger.error('Found non-closed parentheses.')
 
     def _check_dev(self, in_place=False):
 

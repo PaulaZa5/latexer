@@ -25,4 +25,5 @@ if __name__ == '__main__':
         logger.error('Failed to open {}, make sure you\'ve installed the tesseract-ocr.'.format(args.image))
         exit()
 
-    print(Latexer(Cleaner(expr)))
+    res = Latexer(Cleaner(expr))
+    print(res)
