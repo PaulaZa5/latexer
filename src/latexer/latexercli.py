@@ -22,7 +22,7 @@ if __name__ == '__main__':
         expr = pytesseract.image_to_string(args.image, lang='eng', output_type=pytesseract.Output.DICT)['text']
         logger.debug('Opened {}.'.format(args.image))
     except:
-        logger.error('Failed to open {}.'.format(args.image))
+        logger.error('Failed to open {}, make sure you\'ve installed the tesseract-ocr.'.format(args.image))
         exit()
 
     print(Latexer(Cleaner(expr)))

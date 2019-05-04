@@ -14,14 +14,14 @@ if ! which pip3 > /dev/null; then
     apt install pip3
 fi
 
-pip install flask loguru pylatex pytesseract
+pip install flask latex loguru pytesseract
 
 echo "Installed required python packages succesfully."
 
 
 echo "Installing required software components..."
 
-sudo apt install latexmk tesseract-ocr
+apt install latexmk tesseract-ocr -y
 
 echo "Installed required software components."
 

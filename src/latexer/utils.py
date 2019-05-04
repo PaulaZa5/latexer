@@ -162,7 +162,7 @@ class Latexer(object):
         self._check_powers(in_place=True)
         self._inline_latex(in_place=True)
         self._assert_parentheses()
-        self._assert_latex_compatibility()
+        # self._assert_latex_compatibility()
 
     def _assert_latex_compatibility(self):
 

@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask , request
 from loguru import logger
 import pytesseract
@@ -13,7 +15,7 @@ def latexerapi():
         expr = pytesseract.image_to_string(image, lang='eng', output_type=pytesseract.Output.DICT)['text']
         logger.debug('Opened {}.'.format(image))
     except:
-        logger.error('Failed to open {}.'.format(image))
+        logger.error('Failed to open {}, make sure you\'ve installed the tesseract-ocr.'.format(args.image))
         return ''
 
-    return str(Latexer(Cleaner(expr)))
+    return json.dumps({'image': image, 'latex': str(Latexer(Cleaner(expr)))}, indent=4)

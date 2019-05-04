@@ -22,14 +22,16 @@ Application to help you turn your handwritten mathmatical equations into inline 
 <br>
 
 ## To Do
-* [ ] Image Preprocessing.
-* [x] OCR.
-* [x] OCR output cleaner.
-* [x] String equation to LaTeX.
-* [ ] String equation parser.
-* [ ] Parsetree to LaTeX.
-* [ ] Webapp.
-* [ ] Desktop Application.
-* [ ] Mobile Application.
+* [ ] Image Preprocessing
+* [x] OCR
+* [x] OCR output cleaner
+* [x] String equation to LaTeX
+* [ ] String equation parser
+* [ ] Parsetree to LaTeX
+* [x] CLI
+* [x] API
+* [x] Web Application
+* [ ] Desktop Application
+* [ ] Mobile Application
 
 <br>
