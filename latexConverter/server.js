@@ -68,7 +68,7 @@ app.post('/latexer', (req, res, next) => {
         }, function (output) {
             // output is your final result
             console.log(output);
-            res.status(200);
+            res.status(200).send({svg: output});
         })
 });
 
