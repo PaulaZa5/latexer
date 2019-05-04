@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Demo App Landing | Porto - Responsive HTML5 Template 6.0.0</title>	
+		<title>LaTeXer</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -72,12 +72,30 @@
 								</div>
 							</div>
 						</div>
+						<?php if(!empty($errors)){ ?>
+							<div class="row">
+								<div class="mx-auto">
+									<center>
+										<?php foreach ($errors as $error) { ?>
+											<?php echo "<h3 class='text-color-light font-weight-semibold mb-5'>" . $error . "</h3>"; ?>
+										<?php } ?>
+									</center>
+								</div>
+							</div>
+						<?php } ?>
+						<?php if(!empty($latex)){ ?>
+							<div class="row">
+									<textarea class="custom-btn-style-2 text-color-light text-center" readonly disabled style="border-radius:10px; margin-bottom: 5%; width: 100%;">
+										<?php echo $latex; ?>
+									</textarea>
+							</div>
+						<?php } ?>
 						<div class="row">
 							<div class="mx-auto">
 								<center>
-									<form class="md-form">
+									<form class="md-form" method="post" enctype="multipart/form-data">
 									  <div class="file-field">
-									      <input class="btn btn-primary custom-btn-style-1 _borders text-color-light ml-2 mb-2" type="file" id="image" name="image">
+									      <input type="file" id="image" name="image" class="btn btn-primary custom-btn-style-1 _borders text-color-light ml-2 mb-2" required>
 									  </div>
 									  <div id="image_preview">
 									  	
