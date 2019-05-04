@@ -33,9 +33,8 @@ app.post('/latexer', (req, res, next) => {
         if (error) {
             throw error;
         }
-        console.log(svg);
+        res.status(200).send({ svg });
     }
-    res.status(200).send({ message: 'Converted Successfully' });
 });
 
 var server = app.listen(3000, function () {
