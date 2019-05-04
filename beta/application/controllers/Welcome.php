@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 			}
 		}
 
-		print_r($data);
+		//print_r($data);
 
 		$this->load->view('home', $data);
 	}

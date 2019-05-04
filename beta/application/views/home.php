@@ -8,9 +8,9 @@
 
 		<title>LaTeXer</title>	
 
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="Porto - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+		<meta name="keywords" content="LaTeX" />
+		<meta name="description" content="LaTeXer - Turn your handwritten equations into LaTeX with ease!">
+		<meta name="author" content="Radi">
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -67,7 +67,7 @@
 								<div class="custom-top-title-box">
 									<!-- <span class="text-color-light font-weight-semibold">CHECK OUT THE ONLY</span> -->
 									<h1 class="text-color-light">LaTeXer</h1>
-									<span class="text-color-light font-weight-semibold mb-5">Get the LaTeX format of handwritten equations with ease!</span>
+									<span class="text-color-light font-weight-semibold mb-5">Turn your handwritten equations into <i style="font-size: 120%;"> LaTeX </i> with ease!</span>
 									
 								</div>
 							</div>
