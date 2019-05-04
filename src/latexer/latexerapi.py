@@ -16,7 +16,7 @@ def latexerapi():
         logger.debug('Opened {}.'.format(image))
     except:
         logger.error('Failed to open {}, make sure you\'ve installed the tesseract-ocr.'.format(image))
-        return json.dumps({'image': image, 'status': 'failed', 'latex': str(Latexer(Cleaner(expr)))}, indent=4)
+        return json.dumps({'image': image, 'status': 'failed', 'latex': ''}, indent=4)
 
     res = Latexer(Cleaner(expr))
     return json.dumps({'image': image, 'status': res.status, 'latex': str(res)}, indent=4)
