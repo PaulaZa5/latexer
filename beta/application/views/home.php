@@ -83,11 +83,28 @@
 								</div>
 							</div>
 						<?php } ?>
+						<?php if(!empty($svg)){ ?>
+							<div class="row">
+								<div class="col-md-4">
+									<h4 class="text-color-light text-right">Equation:</h4>
+								</div>
+								<div class="col-md-8">
+									<div class="custom-btn-style-2 text-color-light text-center" readonly disabled style="border-radius:10px; margin-bottom: 5%; width: 100%;">
+										<?php echo $svg; ?>
+									</div>
+								</div>
+							</div>
+						<?php } ?>
 						<?php if(!empty($latex)){ ?>
 							<div class="row">
-									<textarea class="custom-btn-style-2 text-color-light text-center" readonly disabled style="border-radius:10px; margin-bottom: 5%; width: 100%;">
+								<div class="col-md-4">
+									<h4 class="text-color-light text-right">LaTeX:</h4>
+								</div>
+								<div class="col-md-8">
+									<div class="custom-btn-style-2 text-color-light text-center" readonly disabled style="border-radius:10px; margin-bottom: 5%; width: 100%;">
 										<?php echo $latex; ?>
-									</textarea>
+									</div>
+								</div>
 							</div>
 						<?php } ?>
 						<div class="row">
