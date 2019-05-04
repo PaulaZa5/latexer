@@ -35,7 +35,7 @@ app.post('/latexer', (req, res, next) => {
     //     }
     //     res.status(200).send({ svg });
     // }
-    mjpage.mjpage('$y = mx + b$', {
+    mjpage.mjpage(equation, {
         format: ["TeX"],
         output: 'svg',
         singleDollars: true, // allow single-dollar delimiter for inline TeX
@@ -67,7 +67,6 @@ app.post('/latexer', (req, res, next) => {
 
         }, function (output) {
             // output is your final result
-            console.log(output);
             res.status(200).send({svg: output});
         })
 });
