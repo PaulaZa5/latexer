@@ -7,12 +7,13 @@ class Cleaner(object):
 
         self._expression = expression
 
-        self._check_spaces(in_place=True)
-        self._check_negatives(in_place=True)
-        self._check_apostrophes(in_place=True)
-        self._check_dots(in_place=True)
-        # self._check_mul(in_place=True)
-        self._check_powers(in_place=True)
+        if len(self._expression) > 0:
+            self._check_spaces(in_place=True)
+            self._check_negatives(in_place=True)
+            self._check_apostrophes(in_place=True)
+            self._check_dots(in_place=True)
+            # self._check_mul(in_place=True)
+            self._check_powers(in_place=True)
 
     def _check_apostrophes(self, in_place=False):
 
@@ -157,13 +158,14 @@ class Latexer(object):
             self._expression = expr[1]
             self.bottom = expr[2]
 
-        self._check_dev(in_place=True)
-        self._check_summation(in_place=True)
-        self._check_int(in_place=True)
-        self._check_powers(in_place=True)
-        self._inline_latex(in_place=True)
-        self._assert_parentheses()
-        # self._assert_latex_compatibility()
+        if len(self._expression) > 0:
+            self._check_dev(in_place=True)
+            self._check_summation(in_place=True)
+            self._check_int(in_place=True)
+            self._check_powers(in_place=True)
+            self._inline_latex(in_place=True)
+            self._assert_parentheses()
+            self._assert_latex_compatibility()
 
     def _assert_latex_compatibility(self):
 
