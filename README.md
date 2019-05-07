@@ -56,11 +56,6 @@ Application to help you turn your handwritten mathmatical equations into inline 
       cd src/latexer/
       export FLASK_APP=latexerapi.py
       flask run
-      node server.js
-      ```
-
-      ```bash
-      python3 ./src/latexerapi.py
       ```
       in your browser
       ```bash
