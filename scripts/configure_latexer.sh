@@ -19,11 +19,13 @@ pip install flask latex loguru pytesseract
 echo "Installed required python packages succesfully."
 
 
-echo "Installing required software components..."
+echo "Installing required software components.."
+
 
 apt install latexmk tesseract-ocr -y
+cd ../latexConverter
+npm install
 
 echo "Installed required software components."
-
 
 exit 0
