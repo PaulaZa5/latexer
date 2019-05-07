@@ -40,9 +40,28 @@ Application to help you turn your handwritten mathmatical equations into inline 
   firefox http://127.0.0.1:5000/latexer?image=./data/1.jpg
   ```
 4. Try the Web Application
-  ```bash
-  python3 ./src/latexerapi.py
-  ```
+
+    You need to have php, nodejs installed on your machine
+      ```bash
+      cd beta
+      php -S localhost:8000
+      ```
+      open another terminal in the master branch
+      ```bash
+      cd latexConverter
+      node server.js
+      ```
+      open another terminal in the master branch
+      ```bash
+      cd src/latexer/
+      export FLASK_APP=latexerapi.py
+      flask run
+      node server.js
+      ```
+
+      ```bash
+      python3 ./src/latexerapi.py
+      ```
 <br>
 
 ## To Do
