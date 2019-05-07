@@ -28,7 +28,7 @@ Application to help you turn your handwritten mathmatical equations into inline 
   ```bash
   git clone https://github.com/BoulaZa5/latexer
   cd latexer
-  bash ./scripts/configure_latexer.sh
+  sudo bash ./scripts/configure_latexer.sh
   ```
 2. Try the command line interface
   ```bash

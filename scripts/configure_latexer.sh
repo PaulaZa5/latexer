@@ -15,6 +15,8 @@ if ! which pip3 > /dev/null; then
 fi
 
 pip install flask latex loguru pytesseract
+sudo apt install npm
+sudo apt install nodejs
 
 echo "Installed required python packages succesfully."
 
