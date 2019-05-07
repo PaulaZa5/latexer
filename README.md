@@ -62,6 +62,10 @@ Application to help you turn your handwritten mathmatical equations into inline 
       ```bash
       python3 ./src/latexerapi.py
       ```
+      in your browser
+      ```bash
+      http://localhost:8000
+      ```
 <br>
 
 ## To Do
