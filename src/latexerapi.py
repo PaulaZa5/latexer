@@ -6,6 +6,7 @@ import pytesseract
 
 from utils import Cleaner, Latexer
 
+
 app = Flask(__name__)
 
 @app.route("/latexer")
@@ -20,3 +21,7 @@ def latexerapi():
 
     res = Latexer(Cleaner(expr))
     return json.dumps({'image': image, 'status': res.status, 'latex': str(res)}, indent=4)
+
+
+if __name__ == '__main__':
+    app.run()

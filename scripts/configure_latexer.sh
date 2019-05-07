@@ -21,8 +21,7 @@ echo "Installed required python packages succesfully."
 
 echo "Installing required software components.."
 
-
-apt install latexmk tesseract-ocr -y
+apt install latexmk tesseract-ocr=3 -y
 cd ../latexConverter
 npm install
 

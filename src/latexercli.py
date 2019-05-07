@@ -23,7 +23,7 @@ if __name__ == '__main__':
         logger.debug('Opened {}.'.format(args.image))
     except:
         logger.error('Failed to open {}, make sure you\'ve installed the tesseract-ocr.'.format(args.image))
-        exit()
+        exit('Failed to open {}, make sure you\'ve installed the tesseract-ocr.')
 
     res = Latexer(Cleaner(expr))
     print(res)

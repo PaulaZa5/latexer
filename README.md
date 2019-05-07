@@ -12,6 +12,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Description](#description)
+- [Testing](#testing)
 - [To Do](#to-do)
 
 ---
@@ -19,6 +20,29 @@
 ## Description
 
 Application to help you turn your handwritten mathmatical equations into inline LaTeX code.
+<br>
+
+## Testing
+
+1. Clone and configure your environment
+  ```bash
+  git clone https://github.com/BoulaZa5/latexer
+  cd latexer
+  bash ./scripts/configure_latexer.sh
+  ```
+2. Try the command line interface
+  ```bash
+  python3 ./src/latexercli.py --image ./data/1.jpg
+  ```
+3. Try the JSON request API
+  ```bash
+  python3 ./src/latexerapi.py
+  firefox http://127.0.0.1:5000/latexer?image=./data/1.jpg
+  ```
+4. Try the Web Application
+  ```bash
+  python3 ./src/latexerapi.py
+  ```
 <br>
 
 ## To Do
