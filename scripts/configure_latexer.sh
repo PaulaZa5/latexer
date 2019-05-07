@@ -14,7 +14,7 @@ if ! which pip3 > /dev/null; then
     apt install pip3
 fi
 
-pip install flask latex loguru pytesseract
+pip3 install flask latex loguru pytesseract
 sudo apt install npm
 sudo apt install nodejs
 
